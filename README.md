@@ -35,7 +35,7 @@ Save changes
 
 Install server dependencies from terminal
 
-> npm install express cors @okta/jwt-verifier axios simple-node-logger -g
+> npm install express cors @okta/jwt-verifier axios simple-node-logger
 
 Start the server
 
@@ -60,7 +60,7 @@ Go to the file config/index.js and update the port value. Save changes.
 
 From another terminal window, install vue-cli, bootstrap and Okta SDK
 
-> npm install bootstrap-vue bootstrap @okta/okta-vue vue-cli -g
+> npm install bootstrap-vue bootstrap @okta/okta-vue vue-cli
 
 Go to the file src/components/DisplayUser.vue and update image src path to point to the server location for the logo.
 
