@@ -1,7 +1,7 @@
 <template>
   <div class="hero">
     <div>
-      <img :src="require('/Users/pragyaseth/OutOfBandMFA/MGM-OutofBandMFA/src/components/logo.png')" style="width:500px;height:100px;"/>
+      <img :src="require('C:\\OutOfBandMFA-master\\OutOfBandMFA-master\\src\\components\\logo.png')" style="width:500px;height:100px;"/>
       <br><br>
       <h1 class="display-3">MFA for User Validation</h1>
       <p class="lead">Please sign in to access this app</p>
