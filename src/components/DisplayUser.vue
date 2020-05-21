@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid mt-4">
     <br>
-    <p class="h2" align="center"><img :src="require('/Users/pragyaseth/OutOfBandMFA/MGM-OutofBandMFA/src/components/logo2.png')" height="70px" width="100px" align="middle"/>
+    <p class="h2" align="center"><img :src="require('C:\\OutOfBandMFA-master\\OutOfBandMFA-master\\src\\components\\logo2.png')" height="70px" width="100px" align="middle"/>
     User Validation</p><br>
     <div>
       <b-row>
