@@ -16,8 +16,8 @@ log.setLevel('info');
 const orgURL = 'https://seth.oktapreview.com'
 const sswsToken = '00Lj2i5RPOR_YdJEgkAlE8HY48a_BhVNxSVLtc5M03'
 const client = '0oaptfdmjzFlIsCEN0h7'
-const host = 'http://localhost'
-const port = '8081'
+const host = 'https://localhost'
+const port = '3000'
 
 
 const hostURL = host + ':' + port
@@ -35,6 +35,15 @@ const oktaJwtVerifier = new OktaJwtVerifier({
 })
 
 let app = express()
+let fs = require('fs')
+let https = require('https')
+
+var options = {
+  key: fs.readFileSync('C:\\src\\cert.key'),
+  cert: fs.readFileSync('C:\\src\\cert.pem')
+};
+
+
 app.use(cors())
 app.options('*', cors())
 app.use(bodyParser.json())
@@ -229,7 +238,7 @@ app.post('/validatePush', async function(req, res){
 })
 
 
-//launches the app on :8081
-app.listen(port, () => {
-  log.info('listening to ' + hostURL)
+//launches the app
+https.createServer(options, app).listen(port, () => {
+   log.info('listening to ' + hostURL)
 })
