@@ -7,6 +7,9 @@ if (!process.env.NODE_ENV) {
   process.env.NODE_ENV = JSON.parse(config.dev.env.NODE_ENV)
 }
 
+const https = require('https')
+const fs = require('fs')
+
 const opn = require('opn')
 const path = require('path')
 const express = require('express')
@@ -83,7 +86,10 @@ devMiddleware.waitUntilValid(() => {
   _resolve()
 })
 
-const server = app.listen(port)
+const server = https.createServer({
+    key: fs.readFileSync('C:\\OutOfBandMFA-master\\OutOfBandMFA-master\\src\\cert.key'),
+    cert: fs.readFileSync('C:\\OutOfBandMFA-master\\OutOfBandMFA-master\\src\\cert.pem')
+}, app).listen(port);
 
 module.exports = {
   ready: readyPromise,
