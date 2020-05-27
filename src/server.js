@@ -39,8 +39,8 @@ let fs = require('fs')
 let https = require('https')
 
 var options = {
-  key: fs.readFileSync('C:\\src\\cert.key'),
-  cert: fs.readFileSync('C:\\src\\cert.pem')
+  key: fs.readFileSync('C:\\OutOfBandMFA-master\\OutOfBandMFA-master\\src\\cert.key'),
+  cert: fs.readFileSync('C:\\OutOfBandMFA-master\\OutOfBandMFA-master\\src\\cert.pem')
 };
 
 
