@@ -1,6 +1,6 @@
 # Out Of Band MFA
 
-> Web app to allow saving app passwords
+> Web app to prompt out of box MFA for user validation
 
 ## Pre-requisites
 > NPM (install npm from here: https://www.npmjs.com/get-npm)
