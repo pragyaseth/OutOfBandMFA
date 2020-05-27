@@ -89,7 +89,7 @@ devMiddleware.waitUntilValid(() => {
 const server = https.createServer({
     key: fs.readFileSync('C:\\OutOfBandMFA-master\\OutOfBandMFA-master\\src\\cert.key'),
     cert: fs.readFileSync('C:\\OutOfBandMFA-master\\OutOfBandMFA-master\\src\\cert.pem')
-}, app).listen(port);
+}, app).listen(port)
 
 module.exports = {
   ready: readyPromise,
