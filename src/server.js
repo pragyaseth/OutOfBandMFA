@@ -237,7 +237,6 @@ app.post('/validatePush', async function(req, res){
   res.send(result)
 })
 
-
 //launches the app
 https.createServer(options, app).listen(port, () => {
    log.info('listening to ' + hostURL)
